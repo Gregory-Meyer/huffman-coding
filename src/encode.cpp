@@ -69,7 +69,7 @@ std::string convert_bitstream(BitsetT bitstream) {
 
         for (int i = 0; i < 8; ++i) {
             if (bitstream.test(bitstream.size() - 1)) {
-                to_put |= static_cast<char>(1 << i);
+                to_put |= static_cast<char>(1 << (7 - i));
             }
 
             bitstream.pop_back();
